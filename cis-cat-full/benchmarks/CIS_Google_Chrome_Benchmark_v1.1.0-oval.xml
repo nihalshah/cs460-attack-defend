@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><oval_definitions xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:win="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows http://oval.mitre.org/language/version5.11/ovaldefinition/complete/windows-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 http://oval.mitre.org/language/version5.11/ovaldefinition/complete/oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-common-5 http://oval.mitre.org/language/version5.11/ovaldefinition/complete/oval-common-schema.xsd">
+	<generator>
+		<oval:product_name>Center for Internet Security</oval:product_name>
+		<oval:schema_version>5.11</oval:schema_version>
+		<oval:timestamp>2016-03-15T16:35:24-04:00</oval:timestamp>
+	</generator>
+	
+	<definitions>
+		<definition class="inventory" id="oval:org.mitre.oval:def:11914" version="20">
+			<metadata>
+				<title>Google Chrome is installed</title>
+				<affected family="windows">
+					<platform>Microsoft Windows XP</platform>
+					<platform>Microsoft Windows Server 2003</platform>
+					<platform>Microsoft Windows Server 2008</platform>
+					<platform>Microsoft Windows Server 2008 R2</platform>
+					<platform>Microsoft Windows Vista</platform>
+					<platform>Microsoft Windows 7</platform>
+					<platform>Microsoft Windows 8</platform>
+					<platform>Microsoft Windows 8.1</platform>
+					<platform>Microsoft Windows Server 2012</platform>
+					<platform>Microsoft Windows Server 2012 R2</platform>
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="cpe:/a:google:chrome" source="CPE"/>
+				<description>Google Chrome is installed</description>
+				<oval_repository>
+					<dates>
+						<submitted date="2010-08-25T11:10:59">
+							<contributor organization="SecPod Technologies">Preeti Subramanian</contributor>
+						</submitted>
+						<status_change date="2010-08-25T16:41:55.200-04:00">DRAFT</status_change>
+						<status_change date="2010-09-13T04:00:36.452-04:00">INTERIM</status_change>
+						<status_change date="2010-10-04T04:00:18.842-04:00">ACCEPTED</status_change>
+						<modified comment="Added anchor to pattern match in ste:11937" date="2010-11-29T16:26:00.755-05:00">
+							<contributor organization="SecPod Technologies">SecPod Team</contributor>
+						</modified>
+						<status_change date="2010-11-29T16:28:38.331-05:00">INTERIM</status_change>
+						<status_change date="2010-12-20T04:00:17.569-05:00">ACCEPTED</status_change>
+						<modified comment="EDITED oval:org.mitre.oval:tst:41561 - The attached file replaces existing Chrome objects with new objects containing the set of the existing object, which is correct for individual installs, and the registry key used by the all users installer." date="2011-10-17T12:47:00.319-04:00">
+							<contributor organization="G2, Inc.">Shane Shaffer</contributor>
+						</modified>
+						<status_change date="2011-10-17T12:54:11.929-04:00">INTERIM</status_change>
+						<modified comment="EDITED oval:org.mitre.oval:def:11914 - Adding 18 new definitions for recent chrome CVEs." date="2011-10-27T09:46:00.665-04:00">
+							<contributor organization="G2, Inc.">Shane Shaffer</contributor>
+						</modified>
+						<status_change date="2011-11-14T04:00:04.342-05:00">ACCEPTED</status_change>
+						<modified comment="EDITED oval:org.mitre.oval:obj:15382 - Make registry key checking faster." date="2012-03-28T14:11:00.591-04:00">
+							<contributor organization="G2, Inc.">Shane Shaffer</contributor>
+						</modified>
+						<status_change date="2012-03-28T14:13:22.833-04:00">INTERIM</status_change>
+						<status_change date="2012-04-16T04:00:27.956-04:00">ACCEPTED</status_change>
+						<modified comment="EDITED oval:org.mitre.oval:obj:15822 - Added windows_view behavior to Google Chrome on 64-bit Windows objects." date="2012-10-05T15:50:00.984-04:00">
+							<contributor organization="G2, Inc.">Shane Shaffer</contributor>
+						</modified>
+						<status_change date="2012-10-05T15:55:55.492-04:00">INTERIM</status_change>
+						<status_change date="2012-10-22T04:00:32.103-04:00">ACCEPTED</status_change>
+						<modified comment="EDITED oval:org.mitre.oval:obj:15382 - Updated Google Chrome Inventory" date="2013-04-08T10:59:00.016-04:00">
+							<contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+						</modified>
+						<status_change date="2013-04-08T11:01:14.956-04:00">INTERIM</status_change>
+						<status_change date="2013-04-29T04:16:03.550-04:00">ACCEPTED</status_change>
+						<modified comment="EDITED oval:org.mitre.oval:def:11914 - definitions for the CVEs addressed by version 29.0.1547.57 of Chrome on Windows" date="2013-08-22T10:37:00.296-04:00">
+							<contributor organization="G2, Inc.">Shane Shaffer</contributor>
+						</modified>
+						<status_change date="2013-08-22T10:39:44.813-04:00">INTERIM</status_change>
+						<status_change date="2013-09-09T04:00:05.507-04:00">ACCEPTED</status_change>
+						<modified comment="EDITED oval:org.mitre.oval:def:11914 - New Vulnerability Definitions for Chrome addressed by versions 31.0.1650.57 and 31.0.1650.63." date="2013-12-30T09:24:00.514-05:00">
+							<contributor organization="G2, Inc.">Shane Shaffer</contributor>
+						</modified>
+						<status_change date="2013-12-30T09:33:57.582-05:00">INTERIM</status_change>
+						<status_change date="2014-01-20T04:00:08.011-05:00">ACCEPTED</status_change>
+						<modified comment="EDITED oval:org.mitre.oval:def:11914 - new vulnerabilities of Google Chrome" date="2014-04-18T14:34:00.335-04:00">
+							<contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+						</modified>
+						<status_change date="2014-04-18T14:36:18.686-04:00">INTERIM</status_change>
+						<status_change date="2014-05-05T04:00:09.797-04:00">ACCEPTED</status_change>
+					</dates>
+					<status>ACCEPTED</status>
+					<min_schema_version>5.10</min_schema_version>
+				</oval_repository>
+			</metadata>
+			<criteria operator="OR">
+				<criterion comment="Check if Google Chrome is installed (HKU)" test_ref="oval:org.mitre.oval:tst:41561"/>
+				<criterion comment="Check if Google Chrome is installed (HKLM)" test_ref="oval:org.cisecurity:tst:999999"/>
+			</criteria>
+		</definition>
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1002" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Allow invocation of file selection dialog' is set to 'Enabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.1_L1_Ensure_Allow_invocation_of_file_selection_dialog_is_set_to_Enabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Allow invocation of file selection dialog' is set to 'Enabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10001"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1003" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Enable alternate error pages' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.2_L1_Ensure_Enable_alternate_error_pages_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Enable alternate error pages' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10002"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1004" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Enable AutoFill' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.3_L1_Ensure_Enable_AutoFill_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Enable AutoFill' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10003"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1005" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Continue running background apps when Google Chrome is closed' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.4_L1_Ensure_Continue_running_background_apps_when_Google_Chrome_is_closed_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Continue running background apps when Google Chrome is closed' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10004"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1006" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Block third party cookies' is set to 'Enabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.5_L1_Ensure_Block_third_party_cookies_is_set_to_Enabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Block third party cookies' is set to 'Enabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10005"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1007" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Allow running plugins that are outdated' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.6_L1_Ensure_Allow_running_plugins_that_are_outdated_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Allow running plugins that are outdated' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10006"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1008" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Always runs plugins that require authorization' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.7_L1_Ensure_Always_runs_plugins_that_require_authorization_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Always runs plugins that require authorization' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10007"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1009" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Specify whether the plugin finder should be disabled' is set to 'Enabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.8_L1_Ensure_Specify_whether_the_plugin_finder_should_be_disabled_is_set_to_Enabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Specify whether the plugin finder should be disabled' is set to 'Enabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10008"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1010" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Enable Google Cloud Print Proxy' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.9_L1_Ensure_Enable_Google_Cloud_Print_Proxy_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Enable Google Cloud Print Proxy' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10009"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1011" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Enable submission of documents to Google Cloud print' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.10_L1_Ensure_Enable_submission_of_documents_to_Google_Cloud_print_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Enable submission of documents to Google Cloud print' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10010"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1012" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Specify a list of Disabled Plugins' is set to 'Enabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.11_L1_Ensure_Specify_a_list_of_Disabled_Plugins_is_set_to_Enabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Specify a list of Disabled Plugins' is set to 'Enabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10011"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1013" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Import saved passwords from default browser on first run' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.12_L1_Ensure_Import_saved_passwords_from_default_browser_on_first_run_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Import saved passwords from default browser on first run' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10012"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1014" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Enable reporting of usage and crash-related data' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.1.13_L1_Ensure_Enable_reporting_of_usage_and_crash-related_data_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Enable reporting of usage and crash-related data' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10013"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1015" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Enable firewall traversal from remote access host' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.3.1_L1_Ensure_Enable_firewall_traversal_from_remote_access_host_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Enable firewall traversal from remote access host' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10014"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1016" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Configure the required domain name for remote access hosts' is set to 'Enabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.3.2_L1_Ensure_Configure_the_required_domain_name_for_remote_access_hosts_is_set_to_Enabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Configure the required domain name for remote access hosts' is set to 'Enabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10015"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1017" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Enable or disable PIN-less authentication' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.3.3_L1_Ensure_Enable_or_disable_PIN-less_authentication_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Enable or disable PIN-less authentication' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10016"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1018" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Enable curtaining of remote access hosts' is set to 'Enabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.3.4_L1_Ensure_Enable_curtaining_of_remote_access_hosts_is_set_to_Enabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Enable curtaining of remote access hosts' is set to 'Enabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10017"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1019" version="1">
+			<metadata>
+				<title>(L2) Ensure 'Default cookies setting' is set to 'Enabled (Keep cookies for the duration of the session)'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.4.1_L2_Ensure_Default_cookies_setting_is_set_to_Enabled_Keep_cookies_for_the_duration_of_the_session" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L2) Ensure 'Default cookies setting' is set to 'Enabled (Keep cookies for the duration of the session)'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10018"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1020" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Default Plugin Setting' is set to 'Enabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.4.2_L1_Ensure_Default_Plugin_Setting_is_set_to_Enabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Default Plugin Setting' is set to 'Enabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10019"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1021" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Configure Extension Installation Blacklist' is set to 'Enabled ("*" for all extensions)'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.7.1_L1_Ensure_Configure_Extension_Installation_Blacklist_is_set_to_Enabled__for_all_extensions" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Configure Extension Installation Blacklist' is set to 'Enabled ("*" for all extensions)'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10020"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1022" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Enable the password manager' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.11.1_L1_Ensure_Enable_the_password_manager_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Enable the password manager' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10021"/>
+			</criteria>
+		</definition>
+
+		<definition class="compliance" id="oval:org.cisecurity.benchmarks.google_chrome:def:1023" version="1">
+			<metadata>
+				<title>(L1) Ensure 'Allow users to show passwords in Password Manager' is set to 'Disabled'</title>
+				<affected family="windows">
+					<product>Google Chrome</product>
+				</affected>
+				<reference ref_id="xccdf_org.cisecurity.benchmarks_rule_1.11.2_L1_Ensure_Allow_users_to_show_passwords_in_Password_Manager_is_set_to_Disabled" ref_url="http://benchmarks.cisecurity.org" source="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Google_Chrome_Benchmark"/>
+				<description>(L1) Ensure 'Allow users to show passwords in Password Manager' is set to 'Disabled'</description>
+			</metadata>
+			<criteria operator="AND">
+				<criterion test_ref="oval:org.cisecurity.benchmarks.google_chrome:tst:10022"/>
+			</criteria>
+		</definition>
+	</definitions>
+	<tests>
+		<registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" check="at least one" check_existence="at_least_one_exists" comment="Check if Google Chrome is installed (HKEY_USERS)" id="oval:org.mitre.oval:tst:41561" version="6">
+			<object object_ref="oval:org.mitre.oval:obj:16251"/>
+			<state state_ref="oval:org.mitre.oval:ste:11937"/>
+		</registry_test>
+		<registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" check="at least one" check_existence="at_least_one_exists" comment="Check if Google Chrome is installed (HKEY_LOCAL_MACHINE)" id="oval:org.cisecurity:tst:999999" version="6">
+			<object object_ref="oval:org.mitre.oval:obj:15822"/>
+			<state state_ref="oval:org.mitre.oval:ste:11937"/>
+		</registry_test>
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'AllowFileSelectionDialogs' is equal to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10001" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10001"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10001"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'AlternateErrorPagesEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10002" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10002"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10002"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'AutoFillEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10003" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10003"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10003"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'BackgroundModeEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10004" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10004"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10004"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'BlockThirdPartyCookies' is equal to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10005" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10005"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10005"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'AllowOutdatedPlugins' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10006" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10006"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10006"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'AlwaysAuthorizePlugins' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10007" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10007"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10007"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'DisablePluginFinder' is equals to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10008" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10008"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10008"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'CloudPrintProxyEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10009" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10009"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10009"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'CloudPrintSubmitEnabled' is equals to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10010" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10010"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10010"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure '1' is equals to '*'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10011" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10011"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10011"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'ImportSavedPasswords' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10012" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10012"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10012"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'MetricsReportingEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10013" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10013"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10013"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'RemoteAccessHostFirewallTraversal' is equals to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10014" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10014"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10014"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'RemoteAccessHostDomain' is not Blank" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10015" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10015"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10015"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'RemoteAccessHostAllowClientPairing' is equals to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10016" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10016"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10016"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'RemoteAccessHostRequireCurtain' is equal to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10017" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10017"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10017"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'DefaultCookiesSetting' is equals to '4'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10018" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10018"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10018"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'DefaultPluginsSetting' is equal to '3'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10019" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10019"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10019"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure '1' is equal to '*'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10020" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10020"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10020"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'PasswordManagerEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10021" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10021"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10021"/>
+		</win:registry_test>
+
+		<win:registry_test check="all" check_existence="all_exist" comment="Ensure 'PasswordManagerAllowShowPasswords' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:tst:10022" version="1">
+			<win:object object_ref="oval:org.cisecurity.benchmarks.google_chrome:obj:10022"/>
+			<win:state state_ref="oval:org.cisecurity.benchmarks.google_chrome:ste:10022"/>
+		</win:registry_test>
+	</tests>
+	<objects>
+		<registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" comment="The registry key to check if Google Chrome is installed" id="oval:org.mitre.oval:obj:16251" version="5">
+			<set xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+				<object_reference>oval:org.mitre.oval:obj:15382</object_reference>
+			</set>
+		</registry_object>
+		
+		<registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" comment="The registry key to check if Google Chrome is installed (admin install for all users)" id="oval:org.mitre.oval:obj:158221" version="2">
+			<behaviors windows_view="32_bit"/>
+			<hive>HKEY_LOCAL_MACHINE</hive>
+			<key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome</key>
+			<name>DisplayName</name>
+		</registry_object>
+		
+		<registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" comment="The registry key to check if Google Chrome is installed (admin install for all users)" id="oval:org.mitre.oval:obj:158222" version="2">
+			<hive>HKEY_LOCAL_MACHINE</hive>
+			<key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome</key>
+			<name>DisplayName</name>
+		</registry_object>
+		
+		<registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" xmlns:oval-def="http://oval.mitre.org/XMLSchema/oval-definitions-5" comment="The registry key to check if Google Chrome is installed" id="oval:org.mitre.oval:obj:15822" version="5">
+			<oval-def:set set_operator="UNION">
+				<oval-def:object_reference>oval:org.mitre.oval:obj:158221</oval-def:object_reference>
+				<oval-def:object_reference>oval:org.mitre.oval:obj:158222</oval-def:object_reference>
+			</oval-def:set>
+		</registry_object>
+		
+		<registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" comment="The registry key to check if Google Chrome is installed (individual users install)" id="oval:org.mitre.oval:obj:15382" version="4">
+			<hive>HKEY_USERS</hive>
+			<key var_check="at least one" var_ref="oval:org.mitre.oval:var:1249"/>
+			<name>DisplayName</name>
+		</registry_object>
+		<registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" comment="Immediate child keys of HKEY_USERS" id="oval:org.mitre.oval:obj:23331" version="1">
+			<behaviors max_depth="1" recurse_direction="down"/>
+			<hive>HKEY_USERS</hive>
+			<key/>
+			<name xsi:nil="true"/>
+		</registry_object>
+		<win:registry_object comment="Ensure 'AllowFileSelectionDialogs' is equal to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10001" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>AllowFileSelectionDialogs</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'AlternateErrorPagesEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10002" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>AlternateErrorPagesEnabled</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'AutoFillEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10003" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>AutoFillEnabled</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'BackgroundModeEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10004" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>BackgroundModeEnabled</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'BlockThirdPartyCookies' is equal to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10005" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>BlockThirdPartyCookies</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'AllowOutdatedPlugins' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10006" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>AllowOutdatedPlugins</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'AlwaysAuthorizePlugins' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10007" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>AlwaysAuthorizePlugins</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'DisablePluginFinder' is equals to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10008" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>DisablePluginFinder</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'CloudPrintProxyEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10009" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>CloudPrintProxyEnabled</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'CloudPrintSubmitEnabled' is equals to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10010" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>CloudPrintSubmitEnabled</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure '1' is equals to '*'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10011" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome\DisabledPlugins</win:key>
+			<win:name>1</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'ImportSavedPasswords' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10012" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>ImportSavedPasswords</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'MetricsReportingEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10013" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>MetricsReportingEnabled</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'RemoteAccessHostFirewallTraversal' is equals to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10014" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>RemoteAccessHostFirewallTraversal</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'RemoteAccessHostDomain' is not Blank" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10015" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>RemoteAccessHostDomain</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'RemoteAccessHostAllowClientPairing' is equals to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10016" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>RemoteAccessHostAllowClientPairing</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'RemoteAccessHostRequireCurtain' is equal to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10017" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>RemoteAccessHostRequireCurtain</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'DefaultCookiesSetting' is equals to '4'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10018" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>DefaultCookiesSetting</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'DefaultPluginsSetting' is equal to '3'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10019" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>DefaultPluginsSetting</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure '1' is equal to '*'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10020" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome\ExtensionInstallBlacklist</win:key>
+			<win:name>1</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'PasswordManagerEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10021" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>PasswordManagerEnabled</win:name>
+		</win:registry_object>
+
+		<win:registry_object comment="Ensure 'PasswordManagerAllowShowPasswords' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:obj:10022" version="1">
+			<win:hive>HKEY_LOCAL_MACHINE</win:hive>
+			<win:key operation="equals">SOFTWARE\Policies\Google\Chrome</win:key>
+			<win:name>PasswordManagerAllowShowPasswords</win:name>
+		</win:registry_object>
+	</objects>
+	<states>
+		<win:registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" comment="The registry key matches with any version of Google Chrome" id="oval:org.mitre.oval:ste:11937" version="2">
+			<win:value operation="pattern match">^Google Chrome.*$</win:value>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'AllowFileSelectionDialogs' is equal to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10001" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1002"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'AlternateErrorPagesEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10002" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1003"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'AutoFillEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10003" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1004"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'BackgroundModeEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10004" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1005"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'BlockThirdPartyCookies' is equal to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10005" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1006"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'AllowOutdatedPlugins' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10006" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1007"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'AlwaysAuthorizePlugins' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10007" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1008"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'DisablePluginFinder' is equals to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10008" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1009"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'CloudPrintProxyEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10009" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1010"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'CloudPrintSubmitEnabled' is equals to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10010" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1011"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure '1' is equals to '*'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10011" version="1">
+			<win:type>reg_sz</win:type>
+			<win:value datatype="string" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1012"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'ImportSavedPasswords' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10012" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1013"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'MetricsReportingEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10013" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1014"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'RemoteAccessHostFirewallTraversal' is equals to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10014" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1015"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'RemoteAccessHostDomain' is not Blank" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10015" version="1">
+			<win:type>reg_sz</win:type>
+			<win:value datatype="string" operation="pattern match" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1016"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'RemoteAccessHostAllowClientPairing' is equals to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10016" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1017"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'RemoteAccessHostRequireCurtain' is equal to '1'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10017" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1018"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'DefaultCookiesSetting' is equals to '4'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10018" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1019"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'DefaultPluginsSetting' is equal to '3'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10019" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1020"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure '1' is equal to '*'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10020" version="1">
+			<win:type>reg_sz</win:type>
+			<win:value datatype="string" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1021"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'PasswordManagerEnabled' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10021" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1022"/>
+		</win:registry_state>
+
+		<win:registry_state comment="Ensure 'PasswordManagerAllowShowPasswords' is equal to '0'" id="oval:org.cisecurity.benchmarks.google_chrome:ste:10022" version="1">
+			<win:type>reg_dword</win:type>
+			<win:value datatype="int" operation="equals" var_ref="oval:org.cisecurity.benchmarks.google_chrome:var:1023"/>
+		</win:registry_state>
+	</states>
+	<variables>
+		<local_variable xmlns:oval-def="http://oval.mitre.org/XMLSchema/oval-definitions-5" comment="Full key path of Google Chrome uninstall registry key under HKEY_USERS" datatype="string" id="oval:org.mitre.oval:var:1249" version="1">
+			<concat>
+				<object_component item_field="key" object_ref="oval:org.mitre.oval:obj:23331"/>
+				<literal_component>\Software\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome</literal_component>
+			</concat>
+		</local_variable>
+
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Allow invocation of file selection dialog' is set to 'Enabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1002" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Enable alternate error pages' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1003" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Enable AutoFill' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1004" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Continue running background apps when Google Chrome is closed' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1005" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Block third party cookies' is set to 'Enabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1006" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Allow running plugins that are outdated' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1007" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Always runs plugins that require authorization' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1008" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Specify whether the plugin finder should be disabled' is set to 'Enabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1009" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Enable Google Cloud Print Proxy' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1010" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Enable submission of documents to Google Cloud print' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1011" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Specify a list of Disabled Plugins' is set to 'Enabled'" datatype="string" id="oval:org.cisecurity.benchmarks.google_chrome:var:1012" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Import saved passwords from default browser on first run' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1013" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Enable reporting of usage and crash-related data' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1014" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Enable firewall traversal from remote access host' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1015" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Configure the required domain name for remote access hosts' is set to 'Enabled'" datatype="string" id="oval:org.cisecurity.benchmarks.google_chrome:var:1016" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Enable or disable PIN-less authentication' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1017" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Enable curtaining of remote access hosts' is set to 'Enabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1018" version="1"/>
+		<external_variable comment="This variable is used in Rule (L2) Ensure 'Default cookies setting' is set to 'Enabled (Keep cookies for the duration of the session)'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1019" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Default Plugin Setting' is set to 'Enabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1020" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Configure Extension Installation Blacklist' is set to 'Enabled (&quot;*&quot; for all extensions)'" datatype="string" id="oval:org.cisecurity.benchmarks.google_chrome:var:1021" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Enable the password manager' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1022" version="1"/>
+		<external_variable comment="This variable is used in Rule (L1) Ensure 'Allow users to show passwords in Password Manager' is set to 'Disabled'" datatype="int" id="oval:org.cisecurity.benchmarks.google_chrome:var:1023" version="1"/>
+	</variables>
+</oval_definitions>
